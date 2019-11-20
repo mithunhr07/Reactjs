@@ -1,0 +1,58 @@
+.container{
+    border:1px ridge;
+    padding: 40px;
+    margin-left: 124px;
+    margin-right: 514px;
+    background-color:blue;
+    font-size: 15px;
+    height: 450px;
+    width: 475px;
+}
+.sign1{
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
+}
+.pass1{
+    margin-top: 37px;
+    font-size: 15px;
+    width: 300px;
+}
+.name1{
+    font-size: 15px;
+    width: 300px;
+}
+.pass2{
+    margin-top: -17px;
+    margin-left: 182px;
+    color: white;
+}
+.sign2{
+    width: 300px;
+    height: 40px;
+    border: 1px ridge;
+    font-size: 15px;
+    margin-right: 130px;
+    margin-left: -49px;
+    background-color: #e91e63;
+}
+.check1{
+      margin-left: -152px;
+}
+.account1{
+    margin-left: -116px;
+    color: white;
+    font-size: 15px;
+}
+.images{
+    height: 50px;
+    width: 80px;
+    border-radius:70%;
+}
+.icons1{
+    margin-right: 65px;
+};
+.sign4{
+    color: white;
+    font-size: 15px;
+}
