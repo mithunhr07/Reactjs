@@ -1,22 +1,38 @@
-import React from 'react';
+import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Signup from './Components/Signup/Signup';
 import Signin from './Components/Signin/Signin';
 import {BrowserRouter as Router , Route } from 'react-router-dom';
 import Lifecycle from './Components/Lifecycle/Lifecycle';
-function App() {
+import Userinput from './Components/Userinput/Userinput';
+import Useroutput from './Components/Useroutput/Useroutput';
+
+class App extends Component  {
+  state={
+    Useroutput:[{
+      name:"Mithun", age:"24"
+    }]
+  }
+  buttonClickHandler=()=>{
+    console.log('clicked');
+    this.setState({
+      Useroutput:[{
+        name: 'Bindu', age:'23'
+      }]
+    })
+  }
+  render(){
   return (
     <div className="App">
-      {/* <Router>
-   <switch> */}
-     {/* <Route exact path='/' component={Signup}></Route>
-     <Route exact path='/signin' component={Signin}></Route> */}
-    {/* </switch>
-     </Router> */}
-    <Lifecycle/>
-    </div>
+    <button onClick={this.buttonClickHandler}>click here</button>
+    <p>i am {this.state.Useroutput[0].name} my age is {this.state.Useroutput[0].age}</p>
+    <Userinput/>
+    <Useroutput name="Mithun" age="24"/>
+    <Useroutput name="Mithun" age="24"/>
+    
+   </div>
   );
 }
-
+}
 export default App;
