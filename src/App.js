@@ -1,12 +1,14 @@
 import React,{Component} from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Signup from './Components/Signup/Signup';
-import Signin from './Components/Signin/Signin';
-import {BrowserRouter as Router , Route } from 'react-router-dom';
+// import Signup from './Components/Signup/Signup';
+// import Signin from './Components/Signin/Signin';
+// import {BrowserRouter as Router , Route } from 'react-router-dom';
+// import Userinput from './Components/Userinput/Userinput';
+// import Useroutput from './Components/Useroutput/Useroutput';
 import Lifecycle from './Components/Lifecycle/Lifecycle';
-import Userinput from './Components/Userinput/Userinput';
-import Useroutput from './Components/Useroutput/Useroutput';
+import Users from './Components/Users/Users';
+import Operation from './Components/Operation/Operation';
 
 class App extends Component  {
   state={
@@ -25,11 +27,15 @@ class App extends Component  {
   render(){
   return (
     <div className="App">
-    <button onClick={this.buttonClickHandler}>click here</button>
+    {/* <button onClick={this.buttonClickHandler}>click here</button>
     <p>i am {this.state.Useroutput[0].name} my age is {this.state.Useroutput[0].age}</p>
     <Userinput/>
     <Useroutput name="Mithun" age="24"/>
-    <Useroutput name="Mithun" age="24"/>
+    <Useroutput name="Mithun" age="24"/> */}
+    {/* <Lifecycle/> */}
+    {/* <Users/> */}
+    <Operation/>
+    
     
    </div>
   );
