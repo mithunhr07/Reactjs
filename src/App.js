@@ -9,6 +9,8 @@ import './App.css';
 import Lifecycle from './Components/Lifecycle/Lifecycle';
 import Users from './Components/Users/Users';
 import Operation from './Components/Operation/Operation';
+import Bind from './Components/Bind/Bind';
+
 
 class App extends Component  {
   state={
@@ -34,7 +36,8 @@ class App extends Component  {
     <Useroutput name="Mithun" age="24"/> */}
     {/* <Lifecycle/> */}
     {/* <Users/> */}
-    <Operation/>
+    {/* <Operation/> */}
+    <Bind/>
     
     
    </div>

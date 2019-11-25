@@ -1,96 +1,39 @@
 import React, { Component } from 'react';
-
 class Operation extends Component {
   state = {
-    Users: [
-      { add: 20 },
-    ],
-    Users1: [
-      { sub: 40 },
-
-    ],
-    Users2: [
-      { mul: 5 },
-
-    ],
-    title: "User list"
+    n1: 20,
+    n2: 20,
+    n3: 20
   }
 
-  makeMeYounger = () => {
-    const newState = this.state.Users.map((User) => {
-      const tempUser = User;
-      tempUser.add += 5;
-      return tempUser;
-    })
-    console.log(newState);
-    this.setState({ newState });
+  subtraction = () => {
+    if (this.state.n1 > 0) {
+      this.setState({
+        n1: this.state.n1 - 5
+      })
+    }
   }
-  makeMeYounger1 = () => {
-    const newState1 = this.state.Users1.map((User1) => {
-      const tempUser1 = User1;
-
-      tempUser1.sub -= 5;
-
-      return tempUser1;
-
+  addition = () => {
+    this.setState({
+      n2: this.state.n2 + 5
     })
-    console.log(newState1);
-    this.setState({ newState1 });
   }
-  makeMeYounger2 = () => {
-    const newState2 = this.state.Users2.map((User2) => {
-      const tempUser2 = User2;
-      tempUser2.mul *= 5;
-      return tempUser2;
+  multiplication = () => {
+    this.setState({
+      n3: this.state.n3 * 5
     })
-    console.log(newState2);
-    this.setState({ newState2 });
   }
   render() {
     return (
       <div>
-        <div>
-          <button onClick={this.makeMeYounger}>add</button>
-          <br />
-
-          <h1>{this.state.title}</h1>
-          {
-            this.state.Users.map((User) => (
-              <div>Addition Operation={User.add}</div>
-            ))
-          }
-        </div>
-
-
-
-
-        <div>
-          <button onClick={this.makeMeYounger1}>sub</button>
-          <br />
-
-          <h1>{this.state.title}</h1>
-          {
-            this.state.Users1.map((User1) => (
-              <div>Subtraction Operation={User1.sub}</div>
-            ))
-          }
-        </div>
-        <div>
-          <button onClick={this.makeMeYounger2}>Multiply</button>
-          <br />
-
-          <h1>{this.state.title}</h1>
-          {
-            this.state.Users2.map((User2) => (
-              <div>Multiplication Operation={User2.mul}</div>
-            ))
-          }
-        </div>
+        <button onClick={this.subtraction}>sub</button>
+        <div>{this.state.n1}</div>
+        <button onClick={this.addition}>add</button>
+        <div>{this.state.n2}</div>
+        <button onClick={this.multiplication}>mul</button>
+        <div>{this.state.n3}</div>
       </div>
-    )
+    );
   }
 }
-
-
-
 export default Operation;
