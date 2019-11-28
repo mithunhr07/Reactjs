@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ChangeColorButton from './ChangeColorButton.js';
+import Navbar from '../Navbar/Navbar.js';
 class Bind extends Component {
   constructor(props) {
     super(props);
@@ -15,8 +16,11 @@ class Bind extends Component {
   }
   render() {
     return (
+      <div>
+        <Navbar/>
       <div style={{ height: 'auto', width: 'auto', backgroundColor: this.state.color }}>
         <ChangeColorButton clickHandler={this.changeColor} currentColor={this.state.color}></ChangeColorButton>
+      </div>
       </div>
     )
   }

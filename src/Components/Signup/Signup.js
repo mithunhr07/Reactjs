@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './Signup.css';
+import Navbar from '../Navbar/Navbar';
 
 class Signup extends Component {
     render() {
         return (
             <div className="form-color">
+                <Navbar/>
                 <div>Signup form</div><br></br>
                 <div><input type="text" name="Name" placeholder="First name" /></div><br></br>
                 <div><input type="text" name="Name" placeholder="Last name" /></div><br></br>

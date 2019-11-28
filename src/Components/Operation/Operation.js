@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Navbar from '../Navbar/Navbar';
 class Operation extends Component {
   state = {
     n1: 20,
@@ -26,6 +27,7 @@ class Operation extends Component {
   render() {
     return (
       <div>
+        <Navbar/>
         <button onClick={this.subtraction}>sub</button>
         <div>{this.state.n1}</div>
         <button onClick={this.addition}>add</button>
